@@ -37,6 +37,49 @@ function dogfoodLoad() {
 	dogfoodSection.innerHTML = dogfoodHTML;
 }
 
+// Configure XHR
+var catfoodRequest = new XMLHttpRequest();
+
+catfoodRequest.addEventListener("load", catfoodLoad);
+catfoodRequest.addEventListener("error", catfoodFail);
+catfoodRequest.open("GET", "json/catfood.json");
+catfoodRequest.send();
+
+function catfoodFail() {
+	console.log("catfood.json FAILED to load.");
+}
+
+function catfoodLoad() {
+	console.log("catfood.json successfully loaded!");
+	var data = JSON.parse(this.responseText);
+	var catfoodHTML = "";
+	var catfoodSection = document.getElementById("cat-food");
+
+	for (var i = 0; i < data.cat_brands.length; i++) {
+		for (var j = 0; j < data.cat_brands[i].types.length; j++) {
+			for (var k = 0; k < data.cat_brands[i].types[j].volumes.length; k++) {
+				catfoodHTML += "<tr class='row'>";
+				catfoodHTML += "<td class='col-md-7'>";
+				catfoodHTML += data.cat_brands[i].name + "</td>";
+				catfoodHTML += "<td class='col-md-4'>";
+				catfoodHTML += data.cat_brands[i].breeds + "</td>";
+				catfoodHTML += "<td class='col-md-3'>";
+				catfoodHTML += data.cat_brands[i].types[j].type + "</td>";
+				catfoodHTML += "<td class='col-md-1 right-aligned'>";
+				catfoodHTML += data.cat_brands[i].types[j].volumes[k].name + "</td>";
+				catfoodHTML += "<td class='col-md-1 right-aligned'>"
+				catfoodHTML += data.cat_brands[i].types[j].volumes[k].price + "</td>";
+				catfoodHTML += "</tr>";
+			};
+		};
+	};
+	catfoodSection.innerHTML = catfoodHTML;
+}
+
+
+
+
+
 
 
 
