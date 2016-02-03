@@ -9,6 +9,9 @@ dogfoodRequest.send();
 
 function dogfoodLoad() {
 	console.log("dogfood.json successfully loaded!");
+	console.log(this.responseText);
+	var dogfoods = JSON.parse(this.responseText);
+	console.log(dogfoods);
 }
 
 function dogfoodFail() {
