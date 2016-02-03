@@ -6,6 +6,10 @@ dogfoodRequest.addEventListener("error", dogfoodFail);
 dogfoodRequest.open("GET", "json/dogfood.json");
 dogfoodRequest.send();
 
+function dogfoodFail() {
+	console.log("dogfood.json FAILED to load.");
+}
+
 function dogfoodLoad() {
 	console.log("dogfood.json successfully loaded!");
 	var data = JSON.parse(this.responseText);
@@ -30,15 +34,8 @@ function dogfoodLoad() {
 			};
 		};
 	};
-
 	dogfoodSection.innerHTML = dogfoodHTML;
 }
-
-function dogfoodFail() {
-	console.log("dogfood.json FAILED to load.");
-}
-
-
 
 
 
