@@ -1,0 +1,7 @@
+.container-fluid {
+	width: 70%;
+}
+
+.right-aligned { /* Add this class to price & volume */
+	text-align: right;
+}
