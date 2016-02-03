@@ -16,7 +16,7 @@ function dogfoodLoad() {
 		for (var j = 0; j < data.dog_brands[i].types.length; j++) {
 			for (var k = 0; k < data.dog_brands[i].types[j].volumes.length; k++) {
 				dogfoodHTML += "<tr class='row'>";
-				dogfoodHTML += "<td class='col-md-3'>";
+				dogfoodHTML += "<td class='col-md-7'>";
 				dogfoodHTML += data.dog_brands[i].name + "</td>";
 				//dogfoodHTML += "<td class='col-md-4'>";
 				//dogfoodHTML += "All</td>";
