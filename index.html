@@ -5,20 +5,45 @@
   <meta charset="utf-8">
   <title>Pets.com</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  
+  <style>
+		.container-fluid {
+			width: 70%;
+		}
+  </style>
 </head>
 
 <body> 
 	
 	<div class="container-fluid">
 
-		<div class="row">
-		  <div class="col-md-2"> Colummn 1</div>
-		  <div class="col-md-4"> Colummn 2</div>
-		  <div class="col-md-6"> Colummn 3</div>
-		</div>
+<table class="table table-hover">
+	<thead>
+		<tr class="row">
+			<th class="col-md-2">Brand</th>
+			<th class="col-md-6">Breed</th>
+			<th class="col-md-2">Type</th>
+			<th class="col-md-1">Volume</th>
+			<th class="col-md-1">Price</th>
+		</tr>
+	</thead>
+	<tbody id="dog-food">
 
-		<div id="dog-food"></div>
+	<!-- THIS SECTION IS MADE IN LOOPS -->
+	 	<tr class="row">
+			<td class='col-md-2'> Brand Name</td>
+			<td class='col-md-6'> Breeds, Breeds, Breeds, Breeds</td>
+			<td class='col-md-2'> Food types</td>
+			<td class='col-md-1'> 22oz</td>
+			<td class='col-md-1'> 19.99</td>
+		</tr>
+	<!-- THIS SECTION IS MADE IN LOOPS -->
+
+
+	</tbody>
+</table>
+
+
+		
 		
 		<div id="cat-food"></div>
 	</div>
