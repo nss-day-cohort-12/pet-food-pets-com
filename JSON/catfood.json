@@ -1,0 +1,42 @@
+{
+	"cat_brands": [
+		{
+			"name": "Purrina",
+			"breeds": "Siamese, Bengal, Showshoe, Munchkin",
+			"types": [
+				{
+					"type_name": "Kitten",
+					"volumes": [
+						{
+							"volume_amount": "20oz",
+							"price": 19.99 
+						},
+						{
+							"volume_amount": "32oz",
+							"price": 26.99 
+						},
+							{
+							"volume_amount": "64oz",
+							"price": 34.99 
+						}
+					]
+				},
+				{
+					
+				}
+			]
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
