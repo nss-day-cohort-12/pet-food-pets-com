@@ -6,6 +6,10 @@ dogfoodRequest.addEventListener("error", dogfoodFail);
 dogfoodRequest.open("GET", "json/dogfood.json");
 dogfoodRequest.send();
 
+function dogfoodFail() {
+	console.log("dogfood.json FAILED to load.");
+}
+
 function dogfoodLoad() {
 	console.log("dogfood.json successfully loaded!");
 	var data = JSON.parse(this.responseText);
@@ -16,7 +20,7 @@ function dogfoodLoad() {
 		for (var j = 0; j < data.dog_brands[i].types.length; j++) {
 			for (var k = 0; k < data.dog_brands[i].types[j].volumes.length; k++) {
 				dogfoodHTML += "<tr class='row'>";
-				dogfoodHTML += "<td class='col-md-3'>";
+				dogfoodHTML += "<td class='col-md-7'>";
 				dogfoodHTML += data.dog_brands[i].name + "</td>";
 				//dogfoodHTML += "<td class='col-md-4'>";
 				//dogfoodHTML += "All</td>";
@@ -30,15 +34,8 @@ function dogfoodLoad() {
 			};
 		};
 	};
-
 	dogfoodSection.innerHTML = dogfoodHTML;
 }
-
-function dogfoodFail() {
-	console.log("dogfood.json FAILED to load.");
-}
-
-
 
 
 
