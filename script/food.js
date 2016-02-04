@@ -20,10 +20,10 @@ function dogfoodLoad() {
 		for (var j = 0; j < data.dog_brands[i].types.length; j++) {
 			for (var k = 0; k < data.dog_brands[i].types[j].volumes.length; k++) {
 				dogfoodHTML += "<tr class='row'>";
-				dogfoodHTML += "<td class='col-md-7'>";
+				dogfoodHTML += "<td class='col-md-2'>";
 				dogfoodHTML += data.dog_brands[i].name + "</td>";
-				//dogfoodHTML += "<td class='col-md-4'>";
-				//dogfoodHTML += "All</td>";
+				dogfoodHTML += "<td class='col-md-5'>";
+				dogfoodHTML += "All</td>";
 				dogfoodHTML += "<td class='col-md-3'>";
 				dogfoodHTML += data.dog_brands[i].types[j].type + "</td>";
 				dogfoodHTML += "<td class='col-md-1 right-aligned'>";
@@ -59,9 +59,9 @@ function catfoodLoad() {
 		for (var j = 0; j < data.cat_brands[i].types.length; j++) {
 			for (var k = 0; k < data.cat_brands[i].types[j].volumes.length; k++) {
 				catfoodHTML += "<tr class='row'>";
-				catfoodHTML += "<td class='col-md-7'>";
+				catfoodHTML += "<td class='col-md-2'>";
 				catfoodHTML += data.cat_brands[i].name + "</td>";
-				catfoodHTML += "<td class='col-md-4'>";
+				catfoodHTML += "<td class='col-md-5'>";
 				catfoodHTML += data.cat_brands[i].breeds + "</td>";
 				catfoodHTML += "<td class='col-md-3'>";
 				catfoodHTML += data.cat_brands[i].types[j].type + "</td>";
